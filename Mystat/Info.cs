@@ -18,7 +18,7 @@ namespace Mystat
         public int ClassWorkPoing { get; set; }
         public int CourseWorkPoint { get; set; }
         public string Participated { get; set; }
-        public string LogInDate { get; set; }
+        public DateTime LogInDate { get; set; }
         public string Late { get; set; }
         public string DidNotCome { get; set; }
         public int Diamond { get; set; }

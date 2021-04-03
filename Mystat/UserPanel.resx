@@ -117,38 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Comment" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Comment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="12-126417_clipart-diamond-cute-mobile-legends-diamond-png" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\12-126417_clipart-diamond-cute-mobile-legends-diamond-png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Briliant" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Briliant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="12-126417_clipart-diamond-cute-mobile-legends-diamond-png1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\12-126417_clipart-diamond-cute-mobile-legends-diamond-png1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lastVersion of close png" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lastVersion of close png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="169-1694462_social-media-and-digital-marketing-experts-review-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\169-1694462_social-media-and-digital-marketing-experts-review-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="169-1694462_social-media-and-digital-marketing-experts-review-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\169-1694462_social-media-and-digital-marketing-experts-review-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="close png" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blackDiamond" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blackDiamond.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

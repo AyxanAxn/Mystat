@@ -10,70 +10,117 @@ using System.Windows.Forms;
 
 namespace Mystat
 {
+
     public partial class Form1 : Form
     {
-        private Panel CreateNewPanel(int studentNum) {
-            var newUserPanel = new Panel();
-            newUserPanel.BackColor = Color.Red;
-            newUserPanel.Size = new Size(1331, 100);
-            int a=348;
-            newUserPanel.Location = new Point(0, a );
-            a += 106;
-            newUserPanel.Name = $"UserPanel{studentNum}";
-            this.Controls.Add(newUserPanel);
+    
+        public List<Info> student { get; set; }
+        public UserControl1 user { get; set; }
 
-
-            var newLabel = new Label();
-            newLabel.ForeColor = Color.Blue;
-           // newLabel
-
-
-
-
-
-            return newUserPanel;
-            
-        }
-
+        private readonly List<Bitmap> Images=new List<Bitmap>();
+        public List<UserControl1> userControl1s = new List<UserControl1>();
 
         public Form1()
         {
+           
             InitializeComponent();
-            guna2TextBox1.Hide();
-           // string[] a= {};
-           // for (int i = 1; i <= 12; i++)
-           // {
-           //     a[i] =  i.ToString();
-           // }
-           // guna2ComboBox1.Items.AddRange(a);
-           //// guna2ComboBox1.Items.Add();
-           // for (int i = 0; i < 3; i++)
-           // {
-           // CreateNewPanel(i);
-           // }
+            guna2Button1.Enabled = false;
+            TopicTxtbpx.Enabled = false;
+            guna2Button1.Enabled = false;
+            guna2Button3.Enabled = false;
+            guna2Button2.Enabled = false;
+
+
+            Images.Add(Properties.Resources.user) ;
+            Images.Add(Properties.Resources.user2) ;
+            Images.Add(Properties.Resources.user) ;
+            Images.Add(Properties.Resources.user2) ;
+            Images.Add(Properties.Resources.user) ;
+
+
+            student = new List<Info> {
+            new Info{
+                Name="Ayxan",
+                Surname="Axundov",
+                LogInDate=new DateTime(2018,04,28),
+                Brithday=new DateTime(2001,06,06),
+                FatherName="Aqil",
+                
+                },
+                new Info{
+                Name="Shemseddin",
+                Surname="Axundov",
+                FatherName="Aqil",
+                Brithday=new DateTime(2002,06,13),
+                LogInDate=new DateTime(2018,04,28),
+                },
+                 new Info{
+                Name="Emin",
+                Surname="Quluzade",
+                FatherName="Ilqar",
+                Brithday=new DateTime(2001,07,11),
+                LogInDate=new DateTime(2018,04,28),
+                },
+                new Info{
+                Name="Zaur",
+                Surname="Ceferov",
+                FatherName="Ceyhun",
+                Brithday=new DateTime(2001,06,12),
+                LogInDate=new DateTime(2001,06,12),
+                },
+                new Info{
+                Name="Arifeli",
+                Surname="Bagirli",
+                FatherName="Father",
+                Brithday=new DateTime(2018,04,28),
+                LogInDate=new DateTime(2018,04,28),
+                }
+            };
+
+
+          
+            for (int i = 0; i < student.Count; i++)
+            {
+
+                var userControl = new UserControl1();
+                userControl.NameInUserC = student[i].Name;
+                userControl.SurnameInUserC = student[i].Surname;
+                userControl.LogInDate = student[i].LogInDate;
+                //userContri].Image = student[i].Photo;
+                userControl.Label = DiamondLbl;
+                userControl.Photo = Images[i];
+                userControl1s.Add(userControl);
+                flowLayoutPanel1.Controls.Add(userControl1s[i]);
+            }
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
+
+            // DiamondLbl.Text = user.num.ToString();
+            
+
+
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            
-           
-            
+
+
+
         }
 
         private void Diamondlbl2_MouseMove(object sender, MouseEventArgs e)
         {
-            Diamondlbl1.Checked = true;
-            Diamondlbl1.ImageSize=new System.Drawing.Size(22,22);
+            //user.Diamondlbl1.Checked = true;
+            //user.Diamondlbl1.ImageSize = new System.Drawing.Size(22, 22);
         }
 
         private void Diamondlbl2_MouseLeave(object sender, EventArgs e)
         {
-            Diamondlbl1.Checked = false;
+           // user.Diamondlbl1.Checked = false;
 
         }
 
@@ -84,21 +131,21 @@ namespace Mystat
 
         private void Diamondlbl3_MouseLeave(object sender, EventArgs e)
         {
-            Diamondlbl1.Checked = false;
-            Diamondlbl2.Checked = false;
+            //user.Diamondlbl1.Checked = false;
+            //user.Diamondlbl2.Checked = false;
         }
 
         private void Diamondlbl3_MouseMove(object sender, MouseEventArgs e)
         {
 
-            Diamondlbl1.Checked = true;
-            Diamondlbl2.Checked = true;
+            //user.Diamondlbl1.Checked = true;
+            //user.Diamondlbl2.Checked = true;
         }
 
         private void guna2ImageButton5_Click(object sender, EventArgs e)
         {
-            guna2ImageButton5.Hide();
-            guna2TextBox1.Show();
+            user.guna2ImageButton5.Hide();
+            user.guna2TextBox1.Show();
 
         }
 
@@ -116,36 +163,52 @@ namespace Mystat
 
         private void guna2TextBox1_MouseEnter(object sender, EventArgs e)
         {
-            guna2ImageButton5.Show();
-            guna2TextBox1.Hide();
+            user.guna2ImageButton5.Show();
+            user.guna2TextBox1.Hide();
         }
 
-      
-        private void Diamondlbl1_Click(object sender, EventArgs e)
+        private void coreteacherLbl_CheckedChanged(object sender, EventArgs e)
         {
-            int num = 5;
-            num-= 1;
-            DiamondLbl.Text = num.ToString();
-            Diamondlbl1.Checked = true;
+
+            if (coreteacherLbl.Checked == true)
+            {
+                guna2Button1.Enabled = true;
+                TopicTxtbpx.Enabled  = true;
+                guna2Button1.Enabled = true;
+                guna2Button3.Enabled = true;
+                guna2Button2.Enabled = true;
+            }
+            else if (coreteacherLbl.Checked == false)
+            {
+                guna2Button1.Enabled = false;
+                TopicTxtbpx.Enabled  = false;
+                guna2Button1.Enabled = false;
+                guna2Button3.Enabled = false;
+                guna2Button2.Enabled = false;
+            }
+
+        }
+        
+
+
+        private void guna2RadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            userControl1s.ForEach(uc=>uc.isInTheClass=true);
         }
 
-        private void Diamondlbl2_Click(object sender, EventArgs e)
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
-            int num = 5;
-            num -= 2;
-            DiamondLbl.Text = num.ToString();
-            Diamondlbl1.Checked = true;
-            Diamondlbl2.Checked = true;
+            string aaa;
+            aaa= TopicTxtbpx.Text;
+            mainTopicLbl.Text += $" {aaa}";
         }
 
-        private void Diamondlbl3_Click(object sender, EventArgs e)
+        private void guna2Button2_Click(object sender, EventArgs e)
         {
-            int num = 5;
-            num -= 3;
-            DiamondLbl.Text = num.ToString();
-            Diamondlbl1.Checked = true;
-            Diamondlbl2.Checked = true;
-            Diamondlbl3.Checked = true;
+
+            TopicTxtbpx.Text = "";
+
         }
     }
 }
